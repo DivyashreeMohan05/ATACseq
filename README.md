@@ -38,13 +38,13 @@ Completed as part of Computational Methods for Epigenome Analysis (COMPEPIWS 202
 ## Repository structure
 
 ```
-report/              analysis_report.md    — full write-up: methods, 13 figures, interpretation
+report/              analysis_report.md    — full write-up: methods, 14 figures, interpretation
 protocol/            part1.md, part2.md    — complete task-by-task workshop notebook
 ChrAccR_analysis/    Browsable ChrAccR HTML report (summary, filtering,
                      normalization, exploratory, differential)
 nextflow_run/        samplesheet.csv, config, MACS2 narrowPeak/summits/consensus
 integrative/         task2–task5 R scripts, logs and result tables
-figures/             36 figures in pipeline_qc/, chraccr/, integrative/
+figures/             37 figures in pipeline_qc/, chraccr/, integrative/
 ```
 
 **[View the ChrAccR report](https://divyashreemohan05.github.io/ATACseq-Epigenomics-SS26/ChrAccR_analysis/index.html)** · **[Read the analysis report](report/analysis_report.md)**
