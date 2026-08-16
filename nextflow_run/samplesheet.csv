@@ -1,0 +1,9 @@
+sample,fastq_1,fastq_2,replicate
+kidney_14_5,/vol/COMPEPIWS/data/reduced/ATAC-seq/kidney_14.5_ATAC_1_R1.fastq.gz,/vol/COMPEPIWS/data/reduced/ATAC-seq/kidney_14.5_ATAC_1_R2.fastq.gz,1
+kidney_14_5,/vol/COMPEPIWS/data/reduced/ATAC-seq/kidney_14.5_ATAC_2_R1.fastq.gz,/vol/COMPEPIWS/data/reduced/ATAC-seq/kidney_14.5_ATAC_2_R2.fastq.gz,2
+kidney_15_5,/vol/COMPEPIWS/data/reduced/ATAC-seq/kidney_15.5_ATAC_1_R1.fastq.gz,/vol/COMPEPIWS/data/reduced/ATAC-seq/kidney_15.5_ATAC_1_R2.fastq.gz,1
+kidney_15_5,/vol/COMPEPIWS/data/reduced/ATAC-seq/kidney_15.5_ATAC_2_R1.fastq.gz,/vol/COMPEPIWS/data/reduced/ATAC-seq/kidney_15.5_ATAC_2_R2.fastq.gz,2
+liver_14_5,/vol/COMPEPIWS/data/reduced/ATAC-seq/liver_14.5_ATAC_1_R1.fastq.gz,/vol/COMPEPIWS/data/reduced/ATAC-seq/liver_14.5_ATAC_1_R2.fastq.gz,1
+liver_14_5,/vol/COMPEPIWS/data/reduced/ATAC-seq/liver_14.5_ATAC_2_R1.fastq.gz,/vol/COMPEPIWS/data/reduced/ATAC-seq/liver_14.5_ATAC_2_R2.fastq.gz,2
+liver_15_5,/vol/COMPEPIWS/data/reduced/ATAC-seq/liver_15.5_ATAC_1_R1.fastq.gz,/vol/COMPEPIWS/data/reduced/ATAC-seq/liver_15.5_ATAC_1_R2.fastq.gz,1
+liver_15_5,/vol/COMPEPIWS/data/reduced/ATAC-seq/liver_15.5_ATAC_2_R1.fastq.gz,/vol/COMPEPIWS/data/reduced/ATAC-seq/liver_15.5_ATAC_2_R2.fastq.gz,2

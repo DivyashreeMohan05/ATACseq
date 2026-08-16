@@ -1,0 +1,20 @@
+#id: 'mlib_deseq2_pca_1'
+#section_name: 'MERGED LIB: consensus_peaks DESeq2 PCA plot'
+#description: "PCA plot of the samples in the experiment.
+#              These values are calculated using <a href='https://bioconductor.org/packages/release/bioc/html/DESeq2.html'>DESeq2</a>
+#              in the <a href='https://github.com/nf-core/atacseq/blob/master/bin/deseq2_qc.r'><code>deseq2_qc.r</code></a> script."
+#plot_type: 'scatter'
+#anchor: 'mlib_deseq2_pca_1'
+#pconfig:
+#    title: 'DESeq2: Principal component plot'
+#    xlab: PC1
+#    ylab: PC2
+"sample"	"PC1: 81% variance"	"PC2: 5% variance"
+"liver_14_5_REP2"	-95.6607428589918	5.558722055206
+"liver_15_5_REP2"	-91.4370431693354	-41.3993866781987
+"liver_15_5_REP1"	-86.2733902414503	-11.0735200506926
+"liver_14_5_REP1"	-82.6468134636277	48.9566272780814
+"kidney_14_5_REP1"	82.4731408703274	-0.104429872446967
+"kidney_15_5_REP2"	83.5013852473842	-1.54720694429759
+"kidney_15_5_REP1"	88.8051148525208	-1.16174242977748
+"kidney_14_5_REP2"	101.238348763173	0.770936642125963

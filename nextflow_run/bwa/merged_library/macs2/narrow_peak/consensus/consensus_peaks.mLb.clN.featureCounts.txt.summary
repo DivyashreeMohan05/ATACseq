@@ -1,0 +1,15 @@
+Status	liver_14_5_REP1.mLb.clN.sorted.bam	liver_15_5_REP2.mLb.clN.sorted.bam	kidney_14_5_REP1.mLb.clN.sorted.bam	liver_15_5_REP1.mLb.clN.sorted.bam	kidney_15_5_REP1.mLb.clN.sorted.bam	kidney_14_5_REP2.mLb.clN.sorted.bam	kidney_15_5_REP2.mLb.clN.sorted.bam	liver_14_5_REP2.mLb.clN.sorted.bam
+Assigned	263648	308294	263244	501608	356388	419862	403593	867160
+Unassigned_Unmapped	0	0	0	0	0	0	0	0
+Unassigned_Read_Type	0	0	0	0	0	0	0	0
+Unassigned_Singleton	0	0	0	0	0	0	0	0
+Unassigned_MappingQuality	0	0	0	0	0	0	0	0
+Unassigned_Chimera	0	0	0	0	0	0	0	0
+Unassigned_FragmentLength	0	0	0	0	0	0	0	0
+Unassigned_Duplicate	0	0	0	0	0	0	0	0
+Unassigned_MultiMapping	0	0	0	0	0	0	0	0
+Unassigned_Secondary	0	0	0	0	0	0	0	0
+Unassigned_NonSplit	0	0	0	0	0	0	0	0
+Unassigned_NoFeatures	619899	544234	1256703	908983	1366618	1336945	1533798	1335147
+Unassigned_Overlapping_Length	3407	3748	6904	5729	8146	9004	8907	9117
+Unassigned_Ambiguity	0	0	0	0	0	0	0	0

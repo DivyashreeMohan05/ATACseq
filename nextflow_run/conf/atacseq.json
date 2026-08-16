@@ -1,0 +1,20 @@
+{
+  "fasta": "/vol/COMPEPIWS/pipelines/references/mm10_reduced_chr18_chr19.fa",
+  "gtf": "/vol/COMPEPIWS/pipelines/references/mm10.reduced.refGene.gtf",
+  "gene_bed": "/vol/COMPEPIWS/pipelines/references/mm10_reduced_chr18_chr19_genes.bed",
+  "blacklist":"/vol/COMPEPIWS/data/annotation/mm10-blacklist.v2.reduced.bed",
+
+  "save_reference": false,
+  "narrow_peak": true,
+  "macs_gsize": 145658490,
+  "save_macs_pileup": true,
+  "fragment_size": 200,
+
+  "skip_preseq":true,
+  "skip_plot_profile":true,
+  "skip_plot_fingerprint":true,
+
+  "max_memory":"64.GB",
+  "max_cpus": 6,
+  "max_time":"2.h"
+}

@@ -1,0 +1,1 @@
+atacseq.json is transcribed from the cat output recorded in protocol/part1.md. The original lives at /vol/COMPEPIWS/pipelines/config/atacseq.json on the de.NBI cluster, which sits outside the group directory tree and was not accessible for direct copying.
