@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="_config/report.css" type="text/css" />
+	<title>Differential</title>
+	<script src="_config/report.js" type="text/javascript"></script>
+</head>
+
+<body style="background:url(_config/logo.png) no-repeat 5px 25px;">
+
+<br />
+<br />
+<h1>Differential Accessibility</h1>
+
+<br />
+<br />
+
+<h2 class="expanded" id="hsection1" onclick="toggleSection('1')">Comparisons</h2>
+<div id="section1" style="display:block">
+<p>Differential Accessibility was quantified for the following comparisons:</p>
+<div class="restricted"><table class="tabdata">
+<tr>
+	<td class="header"></td>
+	<td class="header">Comparison name</td>
+	<td class="header">Annotation column</td>
+	<td class="header">Group 1</td>
+	<td class="header">N1</td>
+	<td class="header">Group 2</td>
+	<td class="header">N2</td>
+</tr>
+<tr>
+	<td class="header">1</td>
+	<td class="centered">kidney vs liver [tissue]</td>
+	<td class="centered">tissue</td>
+	<td class="centered">kidney</td>
+	<td class="centered">4</td>
+	<td class="centered">liver</td>
+	<td class="centered">4</td>
+</tr>
+</table></div>
+
+<p>Tables containing differential accessibility results can be found below.</p>
+<div class="restricted"><table class="tabdata">
+<tr>
+	<td class="header"></td>
+	<td class="header">tiling</td>
+	<td class="header">promoter</td>
+	<td class="header">consensusPeaks</td>
+</tr>
+<tr>
+	<td class="header">kidney vs liver [tissue]</td>
+	<td class="centered">not included (59 MB)</td>
+	<td class="centered"><a href="differential_data/diffTab_1_promoter.tsv">TSV</a></td>
+	<td class="centered"><a href="differential_data/diffTab_1_consensuspeaks.tsv">TSV</a></td>
+</tr>
+</table></div>
+
+<div class="figure">
+	<table class="tabsettings">
+	<tr>
+		<td>Comparison</td>
+		<td>
+			<select disabled="disabled" id="fig1setting2" onchange="updateFigure('fig1')">
+				<option selected="selected" value="1">kidney vs liver [tissue]</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Region type</td>
+		<td>
+			<select id="fig1setting3" onchange="updateFigure('fig1')">
+				<option selected="selected" value="tiling">tiling</option>
+				<option value="promoter">promoter</option>
+				<option value="consensuspeaks">consensusPeaks</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Differential method</td>
+		<td>
+			<select id="fig1setting4" onchange="updateFigure('fig1')">
+				<option selected="selected" value="cutL2fcPadj05">Differential [|log2(fold change)| > 2; adj. p-value < 0.05]</option>
+				<option value="cutL2fcPadj05gain">Gain [log2(fold change) > 2; adj. p-value < 0.05]</option>
+				<option value="cutL2fcPadj05loss">Loss [log2(fold change) < -2; adj. p-value < 0.05]</option>
+				<option value="cRankTopPerc1">Differential [combined rank in top 1%]</option>
+				<option value="cRankTopPerc5">Differential [combined rank in top 5%]</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<img alt="Figure 1" id="fig1image" height="700" src="differential_images/maPlot_1_tiling_cutL2fcPadj05.png" width="700" />
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig1pdf" href="differential_pdfs/maPlot_1_tiling_cutL2fcPadj05.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig1caption" onmousedown="showHide('fig1description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 1</a>
+	</p>
+	<p class="figdescription" id="fig1description">MA plot</p>
+</div>
+
+</div>
+
+<h2 class="expanded" id="hsection2" onclick="toggleSection('2')">Differential motif activity</h2>
+<div id="section2" style="display:block">
+<p>Differential chromVAR [<a href="#ref1">1</a>] motif activity was computed. The volcano plots below summarize the results.</p>
+<div class="figure">
+	<table class="tabsettings">
+	<tr>
+		<td>Comparison</td>
+		<td>
+			<select disabled="disabled" id="fig2setting2" onchange="updateFigure('fig2')">
+				<option selected="selected" value="1">kidney vs liver [tissue]</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Region type</td>
+		<td>
+			<select disabled="disabled" id="fig2setting3" onchange="updateFigure('fig2')">
+				<option selected="selected" value="consensuspeaks">consensusPeaks</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<img alt="Figure 2" id="fig2image" height="700" src="differential_images/volcanoChromVar_1_consensuspeaks.png" width="700" />
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig2pdf" href="differential_pdfs/volcanoChromVar_1_consensuspeaks.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig2caption" onmousedown="showHide('fig2description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 2</a>
+	</p>
+	<p class="figdescription" id="fig2description">Differential motif activity volcano plot</p>
+</div>
+
+<p>Tables summarizing differential chromVAR activity for all motifs can be found below.</p>
+<div class="restricted"><table class="tabdata">
+<tr>
+	<td class="header"></td>
+	<td class="header">tiling</td>
+	<td class="header">promoter</td>
+	<td class="header">consensusPeaks</td>
+</tr>
+<tr>
+	<td class="header">kidney vs liver [tissue]</td>
+	<td class="centered"><a href="differential_data/diffTabChromVar_1_tiling.tsv">TSV</a></td>
+	<td class="centered"><a href="differential_data/diffTabChromVar_1_promoter.tsv">TSV</a></td>
+	<td class="centered"><a href="differential_data/diffTabChromVar_1_consensuspeaks.tsv">TSV</a></td>
+</tr>
+</table></div>
+
+</div>
+
+<h2 class="expanded" id="hsection3" onclick="toggleSection('3')">References</h2>
+<div id="section3" style="display:block">
+<ol>
+	<li><a id="ref1">Schep, Wu, Buenrostro, & Greenleaf (2017). chromVAR: inferring transcription-factor-associated accessibility from single-cell epigenomic data. <i>Nature Methods</i>, <b>14</b>(10), 975-978</a></li>
+</ol>
+</div>
+
+<div id="copyright">
+	<div id="muReportR">
+	This report was generated on 2026-08-03 by <a href="https://github.com/demuellae/muReportR/">muReportR</a> version 0.3.
+	</div>
+	<div id="validlogo">
+		<a href="http://validator.w3.org/check?uri=referer"><img alt="Valid XHTML 1.1" height="31" src="http://www.w3.org/Icons/valid-xhtml11-blue" width="88" /></a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img alt="Valid CSS" height="31" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" width="88" /></a>
+	</div>
+</div>
+</body>
+</html>

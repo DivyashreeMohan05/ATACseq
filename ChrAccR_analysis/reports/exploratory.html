@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="_config/report.css" type="text/css" />
+	<title>Exploratory</title>
+	<script src="_config/report.js" type="text/javascript"></script>
+</head>
+
+<body style="background:url(_config/logo.png) no-repeat 5px 25px;">
+
+<br />
+<br />
+<h1>Exploratory Analysis</h1>
+
+<br />
+<br />
+
+<h2 class="expanded" id="hsection1" onclick="toggleSection('1')">Dataset summary</h2>
+<div id="section1" style="display:block">
+<p>This ATAC-seq dataset contains accessibility profiles for 8 samples.</p>
+<p>Signal has been summarized for the following region sets:</p>
+<div class="restricted"><table class="tabdata">
+<tr>
+	<td class="header"></td>
+	<td class="header">#regions</td>
+	<td class="header">transformations</td>
+</tr>
+<tr>
+	<td class="header">tiling</td>
+	<td class="centered">276356</td>
+	<td class="centered">quantileNorm</td>
+</tr>
+<tr>
+	<td class="header">promoter</td>
+	<td class="centered">1216</td>
+	<td class="centered">quantileNorm</td>
+</tr>
+<tr>
+	<td class="header">consensusPeaks</td>
+	<td class="centered">6256</td>
+	<td class="centered">quantileNorm</td>
+</tr>
+</table></div>
+
+<p>Fragment data IS available.</p>
+</div>
+
+<h2 class="expanded" id="hsection2" onclick="toggleSection('2')">Dimension reduction</h2>
+<div id="section2" style="display:block">
+<p>Read counts are summarized for various region types and the corresponding aggregate count matrices are used for dimension reduction. Counts have been log-normalized (log10(count+1)).</p>
+<div class="figure">
+	<table class="tabsettings">
+	<tr>
+		<td>Method</td>
+		<td>
+			<select id="fig1setting2" onchange="updateFigure('fig1')">
+				<option selected="selected" value="pca">pca</option>
+				<option value="umap">umap</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Region type</td>
+		<td>
+			<select id="fig1setting3" onchange="updateFigure('fig1')">
+				<option selected="selected" value="tiling">tiling</option>
+				<option value="promoter">promoter</option>
+				<option value="consensuspeaks">consensusPeaks</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Annotation</td>
+		<td>
+			<select id="fig1setting4" onchange="updateFigure('fig1')">
+				<option selected="selected" value="all">.ALL</option>
+				<option value="tissue">tissue</option>
+				<option value="time">time</option>
+				<option value="replicate">replicate</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<img alt="Figure 1" id="fig1image" height="700" src="exploratory_images/dimRed_pca_tiling_all.png" width="700" />
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig1pdf" href="exploratory_pdfs/dimRed_pca_tiling_all.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig1caption" onmousedown="showHide('fig1description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 1</a>
+	</p>
+	<p class="figdescription" id="fig1description">Dimension reduction</p>
+</div>
+
+</div>
+
+<h2 class="expanded" id="hsection3" onclick="toggleSection('3')">Clustered heatmaps</h2>
+<div id="section3" style="display:block">
+<p>Samples have been clustered according to the 1000 most variable regions for each region type. Counts have been log-normalized (log2(count+1)).</p>
+<div class="figure">
+	<table class="tabsettings">
+	<tr>
+		<td>Region type</td>
+		<td>
+			<select id="fig2setting2" onchange="updateFigure('fig2')">
+				<option selected="selected" value="tiling">tiling</option>
+				<option value="promoter">promoter</option>
+				<option value="consensuspeaks">consensusPeaks</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<div class="restricted"><a href="exploratory_images/varRegionHeatmap_tiling_highres.png" id="fig2imagehigh"><img alt="Figure 2" id="fig2image" height="1000" src="exploratory_images/varRegionHeatmap_tiling.png" width="1000" /></a></div>
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig2pdf" href="exploratory_pdfs/varRegionHeatmap_tiling.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig2caption" onmousedown="showHide('fig2description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 2</a>
+	</p>
+	<p class="figdescription" id="fig2description">Clustered heatmap. The 1000 most variable regions are shown. Counts have been log-normalized (log2(count+1)).</p>
+</div>
+
+</div>
+
+<h2 class="expanded" id="hsection4" onclick="toggleSection('4')">chromVAR</h2>
+<div id="section4" style="display:block">
+<p>chromVAR [<a href="#ref1">1</a>] analysis. The following motif set(s) were used for the analysis: jaspar_vert.</p>
+<div class="figure">
+	<table class="tabsettings">
+	<tr>
+		<td>Region type</td>
+		<td>
+			<select disabled="disabled" id="fig3setting2" onchange="updateFigure('fig3')">
+				<option selected="selected" value="consensuspeaks">consensusPeaks</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<div class="restrictedx"><img alt="Figure 3" id="fig3image" height="500" src="exploratory_images/chromVarDevVar_consensuspeaks.png" width="1000" /></div>
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig3pdf" href="exploratory_pdfs/chromVarDevVar_consensuspeaks.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig3caption" onmousedown="showHide('fig3description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 3</a>
+	</p>
+	<p class="figdescription" id="fig3description">chromVAR variability. TF motifs are shown ordered according to their variability across the dataset.</p>
+</div>
+
+<div class="figure">
+	<table class="tabsettings">
+	<tr>
+		<td>Region type</td>
+		<td>
+			<select disabled="disabled" id="fig4setting2" onchange="updateFigure('fig4')">
+				<option selected="selected" value="consensuspeaks">consensusPeaks</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<div class="restricted"><a href="exploratory_images/chromVarDevHeatmap_consensuspeaks_highres.png" id="fig4imagehigh"><img alt="Figure 4" id="fig4image" height="1000" src="exploratory_images/chromVarDevHeatmap_consensuspeaks.png" width="1000" /></a></div>
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig4pdf" href="exploratory_pdfs/chromVarDevHeatmap_consensuspeaks.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig4caption" onmousedown="showHide('fig4description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 4</a>
+	</p>
+	<p class="figdescription" id="fig4description">chromVAR deviation scores. The heatmap shows the scores for 100 most variable TF motifs across the dataset.</p>
+</div>
+
+</div>
+
+<h2 class="expanded" id="hsection5" onclick="toggleSection('5')">References</h2>
+<div id="section5" style="display:block">
+<ol>
+	<li><a id="ref1">Schep, Wu, Buenrostro, & Greenleaf (2017). chromVAR: inferring transcription-factor-associated accessibility from single-cell epigenomic data. <i>Nature Methods</i>, <b>14</b>(10), 975-978</a></li>
+</ol>
+</div>
+
+<div id="copyright">
+	<div id="muReportR">
+	This report was generated on 2026-08-03 by <a href="https://github.com/demuellae/muReportR/">muReportR</a> version 0.3.
+	</div>
+	<div id="validlogo">
+		<a href="http://validator.w3.org/check?uri=referer"><img alt="Valid XHTML 1.1" height="31" src="http://www.w3.org/Icons/valid-xhtml11-blue" width="88" /></a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img alt="Valid CSS" height="31" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" width="88" /></a>
+	</div>
+</div>
+</body>
+</html>

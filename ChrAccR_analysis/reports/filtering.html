@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="_config/report.css" type="text/css" />
+	<title>Filtering</title>
+	<script src="_config/report.js" type="text/javascript"></script>
+</head>
+
+<body style="background:url(_config/logo.png) no-repeat 5px 25px;">
+
+<br />
+<br />
+<h1>Filtering summary</h1>
+
+<br />
+<br />
+
+<h2 class="expanded" id="hsection1" onclick="toggleSection('1')">Dataset summary</h2>
+<div id="section1" style="display:block">
+<p>The filtered ATAC-seq dataset contains accessibility profiles for 8 samples.</p>
+<p>Signal has been summarized for the following region sets:</p>
+<div class="restricted"><table class="tabdata">
+<tr>
+	<td class="header"></td>
+	<td class="header">#regions</td>
+	<td class="header">transformations</td>
+</tr>
+<tr>
+	<td class="header">tiling</td>
+	<td class="centered">276356</td>
+	<td class="centered"></td>
+</tr>
+<tr>
+	<td class="header">promoter</td>
+	<td class="centered">1216</td>
+	<td class="centered"></td>
+</tr>
+<tr>
+	<td class="header">consensusPeaks</td>
+	<td class="centered">6256</td>
+	<td class="centered"></td>
+</tr>
+</table></div>
+
+<p>Fragment data IS available.</p>
+</div>
+
+<h2 class="expanded" id="hsection2" onclick="toggleSection('2')">Filtering steps</h2>
+<div id="section2" style="display:block">
+<p>The following filtering steps were applied to the dataset:</p>
+<ul>
+	<li>Regions with a coverage of less than 1 in more than 25 % of samples have been removed.</li>
+	<li>Regions and fragments on chromosomes chrM have been removed.</li>
+</ul>
+</div>
+
+<h2 class="expanded" id="hsection3" onclick="toggleSection('3')">Region filtering</h2>
+<div id="section3" style="display:block">
+<p>Regions in the datasets were filtered according to the above criteria. </p>
+<div class="figure">
+	<a href="filtering_images/regionFilterPieOverall_highres.png" id="fig1imagehigh"><img alt="Figure 1" id="fig1image" height="700" src="filtering_images/regionFilterPieOverall.png" width="700" /></a>
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig1pdf" href="filtering_pdfs/regionFilterPieOverall.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig1caption" onmousedown="showHide('fig1description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 1</a>
+	</p>
+	<p class="figdescription" id="fig1description">Overall retained and removed regions per region type</p>
+</div>
+
+<p>The plot below summarizes the number of retained and removed regions per filtering step.</p>
+<div class="figure">
+	<table class="tabsettings">
+	<tr>
+		<td>Filtering step</td>
+		<td>
+			<select id="fig2setting2" onchange="updateFigure('fig2')">
+				<option selected="selected" value="regionCovg">region_covg</option>
+				<option value="chromosomes">chromosomes</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<a href="filtering_images/regionFilterPie_regionCovg_highres.png" id="fig2imagehigh"><img alt="Figure 2" id="fig2image" height="700" src="filtering_images/regionFilterPie_regionCovg.png" width="700" /></a>
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig2pdf" href="filtering_pdfs/regionFilterPie_regionCovg.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig2caption" onmousedown="showHide('fig2description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 2</a>
+	</p>
+	<p class="figdescription" id="fig2description">Retained and removed regions per region type and filtering step</p>
+</div>
+
+</div>
+
+<div id="copyright">
+	<div id="muReportR">
+	This report was generated on 2026-08-03 by <a href="https://github.com/demuellae/muReportR/">muReportR</a> version 0.3.
+	</div>
+	<div id="validlogo">
+		<a href="http://validator.w3.org/check?uri=referer"><img alt="Valid XHTML 1.1" height="31" src="http://www.w3.org/Icons/valid-xhtml11-blue" width="88" /></a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img alt="Valid CSS" height="31" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" width="88" /></a>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="_config/report.css" type="text/css" />
+	<title>Normalization</title>
+	<script src="_config/report.js" type="text/javascript"></script>
+</head>
+
+<body style="background:url(_config/logo.png) no-repeat 5px 25px;">
+
+<br />
+<br />
+<h1>Normalization summary</h1>
+
+<br />
+<br />
+
+<h2 class="expanded" id="hsection1" onclick="toggleSection('1')">Normalization summary</h2>
+<div id="section1" style="display:block">
+<p>The normalized ATAC-seq dataset contains accessibility profiles for 8 samples.</p>
+<p>Signal has been normalized for the following region sets:</p>
+<div class="restricted"><table class="tabdata">
+<tr>
+	<td class="header"></td>
+	<td class="header">#regions</td>
+	<td class="header">normalization</td>
+</tr>
+<tr>
+	<td class="header">tiling</td>
+	<td class="centered">276356</td>
+	<td class="centered">quantileNorm</td>
+</tr>
+<tr>
+	<td class="header">promoter</td>
+	<td class="centered">1216</td>
+	<td class="centered">quantileNorm</td>
+</tr>
+<tr>
+	<td class="header">consensusPeaks</td>
+	<td class="centered">6256</td>
+	<td class="centered">quantileNorm</td>
+</tr>
+</table></div>
+
+</div>
+
+<h2 class="expanded" id="hsection2" onclick="toggleSection('2')">QQ plot</h2>
+<div id="section2" style="display:block">
+<p>The plot below shows the quantile-quantile relationship of unnormalized to normalized insertion counts, overall and for each sample.</p>
+<div class="figure">
+	<table class="tabsettings">
+	<tr>
+		<td>Region type</td>
+		<td>
+			<select id="fig1setting2" onchange="updateFigure('fig1')">
+				<option selected="selected" value="tiling">tiling</option>
+				<option value="promoter">promoter</option>
+				<option value="consensuspeaks">consensusPeaks</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Sample</td>
+		<td>
+			<select id="fig1setting3" onchange="updateFigure('fig1')">
+				<option selected="selected" value="s0">[ALL]</option>
+				<option value="s1">kidney_14_5_REP1</option>
+				<option value="s2">kidney_14_5_REP2</option>
+				<option value="s3">kidney_15_5_REP1</option>
+				<option value="s4">kidney_15_5_REP2</option>
+				<option value="s5">liver_14_5_REP1</option>
+				<option value="s6">liver_14_5_REP2</option>
+				<option value="s7">liver_15_5_REP1</option>
+				<option value="s8">liver_15_5_REP2</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<img alt="Figure 1" id="fig1image" height="700" src="normalization_images/qqPlot_tiling_s0.png" width="700" />
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig1pdf" href="normalization_pdfs/qqPlot_tiling_s0.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig1caption" onmousedown="showHide('fig1description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 1</a>
+	</p>
+	<p class="figdescription" id="fig1description">QQ-plot of unnormalized vs normalized counts</p>
+</div>
+
+</div>
+
+<h2 class="expanded" id="hsection3" onclick="toggleSection('3')">Quantile heatmaps</h2>
+<div id="section3" style="display:block">
+<p>The heatmaps below show the unnormalized and normalized insertion counts at each quantile for each sample in the dataset.</p>
+<div class="figure">
+	<table class="tabsettings">
+	<tr>
+		<td>Region type</td>
+		<td>
+			<select id="fig2setting2" onchange="updateFigure('fig2')">
+				<option selected="selected" value="tiling">tiling</option>
+				<option value="promoter">promoter</option>
+				<option value="consensuspeaks">consensusPeaks</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<br />
+	<div class="restrictedx"><a href="normalization_images/quantileHeatmaps_tiling_highres.png" id="fig2imagehigh"><img alt="Figure 2" id="fig2image" height="700" src="normalization_images/quantileHeatmaps_tiling.png" width="1000" /></a></div>
+	<p class="caption">
+		<span title="Open PDF"><a class="figicon" id="fig2pdf" href="normalization_pdfs/quantileHeatmaps_tiling.pdf"><img alt="Open PDF" height="20" onmouseout="pdficon(this, false)" onmouseover="pdficon(this)" src="_config/pdf_inactive.png" width="20" /></a></span>
+		<a id="fig2caption" onmousedown="showHide('fig2description')" onmouseout="doCursor()" onmouseover="doCursor()">Figure 2</a>
+	</p>
+	<p class="figdescription" id="fig2description">Heatmaps of unnormalized vs normalized counts for each quantile and sample</p>
+</div>
+
+</div>
+
+<div id="copyright">
+	<div id="muReportR">
+	This report was generated on 2026-08-03 by <a href="https://github.com/demuellae/muReportR/">muReportR</a> version 0.3.
+	</div>
+	<div id="validlogo">
+		<a href="http://validator.w3.org/check?uri=referer"><img alt="Valid XHTML 1.1" height="31" src="http://www.w3.org/Icons/valid-xhtml11-blue" width="88" /></a>
+		<a href="http://jigsaw.w3.org/css-validator/check/referer"><img alt="Valid CSS" height="31" src="http://jigsaw.w3.org/css-validator/images/vcss-blue" width="88" /></a>
+	</div>
+</div>
+</body>
+</html>
