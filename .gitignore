@@ -1,0 +1,15 @@
+*.bam
+*.bai
+*.bigWig
+*.bw
+*.bdg
+*.bedGraph
+.Rhistory
+.RData
+.Rproj.user/
+work/
+.nextflow*
+.DS_Store
+._*
+figures_hackmd_backup/
+*.rds
