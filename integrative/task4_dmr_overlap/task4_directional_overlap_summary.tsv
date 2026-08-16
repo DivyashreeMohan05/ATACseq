@@ -1,0 +1,5 @@
+ATAC_peak_type	DMR_direction	count
+Kidney-specific	Kidney_hypermethylated	0
+Kidney-specific	Liver_hypermethylated	76
+Liver-specific	Kidney_hypermethylated	459
+Liver-specific	Liver_hypermethylated	3

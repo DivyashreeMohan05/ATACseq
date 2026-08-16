@@ -1,0 +1,10 @@
+category	count	percentage_of_DMRs
+Total significant DMRs	3254	100
+DMRs overlapping kidney Het	128	3.93
+DMRs overlapping liver Het	242	7.44
+DMRs overlapping Het in either tissue	329	10.11
+DMRs overlapping Het in both tissues	41	1.26
+DMRs overlapping kidney-specific ATAC peaks	76	2.34
+DMRs overlapping liver-specific ATAC peaks	462	14.2
+DMRs overlapping any differential ATAC peak	538	16.53
+DMRs overlapping both ATAC peak sets	0	0

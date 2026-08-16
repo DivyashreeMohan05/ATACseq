@@ -1,0 +1,27 @@
+
+INPUT CHECKS
+Total WGBS regions: 6145 
+Significant DMRs, FDR < 0.05: 3254 
+Kidney ChromHMM intervals: 36273 
+Liver ChromHMM intervals: 28635 
+Kidney Het intervals: 4517 
+Liver Het intervals: 4869 
+Kidney-specific ATAC peaks: 109 
+Liver-specific ATAC peaks: 509 
+
+OVERLAP RESULTS
+                                    category count percentage_of_DMRs
+                      Total significant DMRs  3254             100.00
+                 DMRs overlapping kidney Het   128               3.93
+                  DMRs overlapping liver Het   242               7.44
+       DMRs overlapping Het in either tissue   329              10.11
+        DMRs overlapping Het in both tissues    41               1.26
+ DMRs overlapping kidney-specific ATAC peaks    76               2.34
+  DMRs overlapping liver-specific ATAC peaks   462              14.20
+ DMRs overlapping any differential ATAC peak   538              16.53
+        DMRs overlapping both ATAC peak sets     0               0.00
+
+Output files created:
+task4_overlap_summary.tsv
+task4_DMR_overlap_details.csv
+significant_DMRs_FDR05.bed
