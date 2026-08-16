@@ -47,7 +47,7 @@ integrative/         task2–task5 R scripts, logs and result tables
 figures/             36 figures in pipeline_qc/, chraccr/, integrative/
 ```
 
-**[View the ChrAccR report](https://divyashreemohan05.github.io/ATACseq-Epigenomics-SS26/ChrAccR_analysis/reports/index.html)** · **[Read the analysis report](report/analysis_report.md)**
+**[View the ChrAccR report](https://divyashreemohan05.github.io/ATACseq-Epigenomics-SS26/ChrAccR_analysis/index.html)** · **[Read the analysis report](report/analysis_report.md)**
 
 ## Notes on the data
 
