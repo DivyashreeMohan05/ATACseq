@@ -5,7 +5,7 @@
 *.bdg
 *.bedGraph
 .Rhistory
-.RData
+*.RData
 .Rproj.user/
 work/
 .nextflow*
