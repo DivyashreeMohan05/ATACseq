@@ -761,7 +761,7 @@ awk '$1>1'  gene_dmr_counts.txt | wc -l                             # 1297 genes
 awk '$1==1' gene_dmr_counts.txt | wc -l                             #  384 genes with exactly 1
 ```
 
-Most genes associated with a DMR have more than one (1,297 of 1,681), with the extreme case NM_175751 linked to 59 separate DMRs. Since DMRs (6,145) far outnumber unique genes (1,681), differential methylation clusters around particular genes rather than being distributed one DMR per gene.
+Most transcripts associated with a tested region have more than one (1,297 of 1,681), with the extreme case NM_175751 linked to 59 separate regions. Since tested regions (6,145) far outnumber unique transcripts (1,681), and those transcripts collapse to 1,045 genes once mapped through transcript_to_gene.tsv and joined with the expression table, differential methylation clusters around particular genes rather than being distributed one region per gene.
 
 ### c. Heatmaps of mean methylation per group and mean CPM of the closest genes
 

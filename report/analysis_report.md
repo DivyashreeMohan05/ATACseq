@@ -217,7 +217,7 @@ Finally, each DMR was assigned to its closest gene and related to expression.
 bedtools closest -a dmr_sorted.bed -b genes_sorted.bed -d > dmr_closest_gene.bed
 ```
 
-The 6,145 DMRs map to only 1,681 unique genes, and 1,297 of those carry more than one DMR — the extreme case 59. **Differential methylation clusters around particular genes**, suggesting coordinated regional remodelling over extended domains rather than isolated CpG-level switches.
+The 6,145 tested regions map to only 1,681 unique transcripts, and 1,297 of those carry more than one region — the extreme case 59. Collapsing transcripts to genes and joining with the expression table leaves 1,045 genes with both measurements. **Differential methylation clusters around particular genes**, suggesting coordinated regional remodelling over extended domains rather than isolated CpG-level switches.
 
 ![Methylation heatmap](../figures/integrative/42_heatmap_dmr_methylation.png)
 ![Expression heatmap](../figures/integrative/43_heatmap_dmr_expression.png)
