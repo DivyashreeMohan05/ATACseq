@@ -6,9 +6,9 @@ End-to-end chromatin accessibility analysis covering the nf-core/atacseq pipelin
 
 This project processes eight paired-end ATAC-seq libraries from mouse fetal **liver** and **kidney** at embryonic days **E14.5** and **E15.5** (two biological replicates per tissue and timepoint) to identify tissue-specific regulatory elements, infer the transcription factors driving them, and relate accessibility to the other epigenetic layers profiled in parallel by the other course groups. Data are restricted to a reduced mm10 reference containing chromosomes 18 and 19 only (145,658,490 bp).
 
-Completed as part of Computational Methods for Epigenome Analysis (COMPEPIWS 2026) at Saarland University, Walter Lab & Müller Lab (ICBB), group `atacseq1`.
+Data and computing environment provided by the Walter Lab and Müller Lab (ICBB), Saarland University.
 
-**Authors:** Divyashree Mohan and Ajay Nimbalkar · Mentor: Midhuna Immaculate Maran
+**Authors:** Divyashree Mohan — nf-core/atacseq pipeline, quality control, differential accessibility, motif and footprint analysis, IGV integration, differential methylation vs expression · Ajay Nimbalkar — ChrAccR pipeline and report, methylation–accessibility correlation, DMR overlap analysis
 
 **Samples:** `kidney_14_5_REP1/2`, `kidney_15_5_REP1/2`, `liver_14_5_REP1/2`, `liver_15_5_REP1/2` — 1.7–4.4 M reads each
 
@@ -47,7 +47,7 @@ integrative/         task2–task5 R scripts, logs and result tables
 figures/             37 figures in pipeline_qc/, chraccr/, integrative/
 ```
 
-**[View the ChrAccR report](https://divyashreemohan05.github.io/ATACseq-Epigenomics-SS26/ChrAccR_analysis/index.html)** · **[Read the analysis report](report/analysis_report.md)**
+**[View the ChrAccR report](https://divyashreemohan05.github.io/ATACseq/ChrAccR_analysis/index.html)** · **[Read the analysis report](report/analysis_report.md)**
 
 ## Notes on the data
 

@@ -211,7 +211,7 @@ Of 6,145 tested regions, 3,254 were significant DMRs at FDR < 0.05. Overlapping 
 
 The directional result is the strongest single number here. Of the 538 overlaps, **535 (99.44%) are inverse**: all 76 kidney-specific accessible peaks overlapping a DMR are liver-hypermethylated, and 459 of 462 liver-specific ones are kidney-hypermethylated. Where a region changes in both assays, the tissue with open chromatin is essentially always the tissue with lower methylation. This is far tighter than the global correlation in Section 7, because conditioning on regions differential in *both* assays selects exactly the regulatory elements where the layers are coupled, filtering out the constitutively unmethylated peaks that flatten the overall correlation.
 
-Finally, each DMR was assigned to its closest gene and related to expression.
+Finally, each tested region was assigned to its closest transcript and related to expression. Note that gene assignment was run on all 6,145 tested regions rather than the 3,254 significant ones, so the counts below describe the tested set as a whole.
 
 ```bash
 bedtools closest -a dmr_sorted.bed -b genes_sorted.bed -d > dmr_closest_gene.bed
@@ -222,7 +222,7 @@ The 6,145 tested regions map to only 1,681 unique transcripts, and 1,297 of thos
 ![Methylation heatmap](../figures/integrative/42_heatmap_dmr_methylation.png)
 ![Expression heatmap](../figures/integrative/43_heatmap_dmr_expression.png)
 
-**Figure 13.** Mean methylation (left) and mean log2(CPM+1) expression (right) for the 30 genes with the most DMRs, in the same row order. *Mbp* is high-methylation in kidney and low in liver, yet comparably expressed in both.
+**Figure 13.** Mean methylation (left) and mean log2(CPM+1) expression (right) for the 30 genes with the most DMRs, in the same row order. *Slc14a2* and *Trpm3* are near-white in the methylation panel yet deep blue in liver expression — a large expression difference with essentially no methylation difference.
 
 Spearman correlation between gene-averaged methylation and expression is significant but weak: ρ = −0.099 (p = 0.0014) in kidney, ρ = −0.120 (p = 0.0001) in liver. The weakness follows directly from Section 7. Averaging across a whole gene mixes promoter CpGs, where methylation is negatively associated with expression, with gene-body CpGs, where it is positively associated; the contributions partially cancel, leaving a small negative residual. Separating the two compartments would be expected to recover a much stronger promoter correlation.
 

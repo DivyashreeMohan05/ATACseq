@@ -719,9 +719,9 @@ chr18	3166613	3166877	0.00184719860278927	chr18	3122491	3123412	NM_001167539	0	-
 9921 dmr_closest_gene.bed
 ```
 
-Every DMR was matched to its nearest gene, with the final column giving the distance in bp (0 means overlapping). The output has 9,921 rows against 6,145 DMRs because some DMRs are equidistant from more than one transcript and are therefore reported more than once.
+Every tested region was matched to its nearest transcript, with the final column giving the distance in bp (0 means overlapping). The output has 9,921 rows against 6,145 tested regions because some regions are equidistant from more than one transcript and are therefore reported more than once.
 
-### b. How many DMRs per gene?
+### b. How many tested regions per transcript?
 
 ```bash
 awk '{print $8}' dmr_closest_gene.bed | sort | uniq -c | sort -rn > gene_dmr_counts.txt
